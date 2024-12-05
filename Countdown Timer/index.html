@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Countdown Timer</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="container text-center py-2">
+    <h1 class="display-4 text-white mb-3">Countdown to Your Event</h1>
+    <p class="mt-2 text-light" id="event-message"></p>
+    <div class="mb-3" id="event-input">
+      <input type="text" id="event-name" class="form-control" placeholder="Enter Event Name" style="max-width: 300px; margin: 0 auto;">
+    </div>
+    <div class="mb-5" id="date-input">
+      <input type="datetime-local" id="event-date" class="form-control" style="max-width: 300px; margin: 0 auto;">
+      <button id="start-btn" class="btn btn-primary mt-3">Start Countdown</button>
+    </div>
+    <div class="row g-4 justify-content-center" id="timer" style="display: none;">
+      <div class="col-12  col-sm-3 ">
+        <div class="card shadow-lg border-0 bg-info rounded-4 timer-card" id="days-card">
+          <div class="card-body ">
+            <h2 id="days">00</h2>
+            <p class="card-text">Days</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-3">
+        <div class="card shadow-lg border-0 bg-warning rounded-4 timer-card" id="hours-card">
+          <div class="card-body">
+            <h2 id="hours">00</h2>
+            <p class="card-text">Hours</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-3">
+        <div class="card shadow-lg border-0 bg-success rounded-4 timer-card" id="minutes-card">
+          <div class="card-body">
+            <h2 id="minutes">00</h2>
+            <p class="card-text">Minutes</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-3">
+        <div class="card shadow-lg border-0 rounded-4 timer-card" id="seconds-card">
+          <div class="card-body">
+            <h2 id="seconds">00</h2>
+            <p class="card-text">Seconds</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="share-btn" class="btn btn-primary mt-3" onclick="shareLink()">Share Link</button>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
