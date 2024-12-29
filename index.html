@@ -3,22 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Project Links</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <style>
+        body {
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 600px;
+        }
+        .project-card {
+            border: none;
+            border-radius: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .project-card a {
+            display: block;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="row">
-            <div class="col bg-primary my-2"><a class="text-dark text-decoration-none display-5" href="Countdown Timer/index.html">Countdown Timer</a></div>
-        </div>
-        <div class="row">
-            <div class="col bg-info my-2"><a class="text-dark text-decoration-none display-5" href="Event Management System/index.html">Event Management System</a></div>
-        </div>
-        <div class="row">
-            <div class="col bg-info my-2"><a class="text-dark text-decoration-none display-5" href="Spotify-Clone-main/index.html">Music-PlateForm</a></div>
+            <div class="col-12 mb-3">
+                <div class="card project-card bg-primary">
+                    <a class="text-white text-decoration-none" href="Countdown Timer/index.html">Countdown Timer</a>
+                </div>
+            </div>
+            <div class="col-12 mb-3">
+                <div class="card project-card bg-success">
+                    <a class="text-white text-decoration-none" href="Event Management System/index.html">Event Management System</a>
+                </div>
+            </div>
+            <div class="col-12 mb-3">
+                <div class="card project-card bg-danger">
+                    <a class="text-white text-decoration-none" href="Spotify-Clone-main/index.html">Music Platform</a>
+                </div>
+            </div>
+            <div class="col-12 mb-3">
+                <div class="card project-card bg-warning">
+                    <a class="text-white text-decoration-none" href="#">Background generator</a>
+                </div>
+            </div>
         </div>
     </div>
-
 </body>
 </html>
