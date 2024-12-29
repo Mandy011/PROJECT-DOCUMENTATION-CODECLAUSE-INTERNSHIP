@@ -1,0 +1,156 @@
+body {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%; 
+    max-width: 600px; 
+    height: auto; 
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 15px 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+li {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.project-card {
+    border: none;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px;
+    position: relative;
+    width: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
+.project-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.project-info a {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: flex; /* Flex for aligning icon and text */
+    align-items: center; /* Align icon with text */
+}
+
+.project-info a i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.project-info a:hover {
+    color: #6a11cb;
+}
+
+.view-project-btn {
+    padding: 10px 18px;
+    background-color: #6a11cb;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+.view-project-btn:hover {
+    background-color: #2575fc;
+    transform: scale(1.1);
+}
+
+/* Custom Overlay for Image Preview */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.overlay img {
+    max-width: 50%;
+    max-height: 50%;
+    object-fit: contain;
+    border-radius: 20px;
+    animation: zoomIn 0.5s ease-in-out;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.overlay:active {
+    cursor: pointer;
+}
